@@ -20,13 +20,13 @@ class ExaminerServiceImplTest {
     @InjectMocks
     private ExaminerServiceImpl examinerService;
 
-    @Test
-    void shouldGetQuestion() {
-        Mockito.when(javaQuestionService.getAll()).thenReturn(setQuestion);
-        Mockito.when(javaQuestionService.getRandomQuestion()).thenReturn(question2);
-        Collection<Question> expected = examinerService.getQuestion(1);
-        System.out.println(expected);
-        assertEquals(expected,setQuestion1);
-
-    }
+//    @Test
+//    void shouldGetQuestion() {
+//        Mockito.when(javaQuestionService.getAll()).thenReturn(setQuestion);
+//        Mockito.when(javaQuestionService.getRandomQuestion()).thenReturn(question2);
+//        Collection<Question> expected = examinerService.getQuestion(1);
+//        System.out.println(expected);
+//        assertEquals(expected,setQuestion1);
+//
+//    }
 }

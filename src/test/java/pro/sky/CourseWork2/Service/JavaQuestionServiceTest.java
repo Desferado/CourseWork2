@@ -1,15 +1,25 @@
 package pro.sky.CourseWork2.Service;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.BDDMockito.given;
 import static pro.sky.CourseWork2.ServiceConstances.*;
 
 
 class JavaQuestionServiceTest {
-    public JavaQuestionService javaQuestionService = new JavaQuestionService(setQuestion);
+    @Mock
+    public JavaQuestionRepository javaQuestionRepository;
+    @InjectMocks
+    public JavaQuestionService javaQuestionService;
 
     @Test
     void shouldGetQuestionWhenAddQuestionAndAnswer() {
+        given(javaQuestionRepository.add(question1)).willReturn(question1);
         assertEquals(question1, javaQuestionService.add(q1,a1));
     }
     @Test
