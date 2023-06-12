@@ -10,7 +10,6 @@ import pro.sky.CourseWork2.exceptions.SetIndexOutOfBoundsException;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Random;
 
 @Service
 public class ExaminerServiceImpl implements ExaminerService {

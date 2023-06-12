@@ -52,7 +52,7 @@ public class JavaQuestionRepository implements QuestionRepository {
     public void validateQuestion (Question question){
         for (Question q: javaQuestions) {
             if  (q.equals(question)){
-                throw new AllreadyContainsException();
+                throw new AllreadyContainsException("Already added");
             }
         }
     }
